@@ -1,0 +1,858 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Trần Phan Đức Đạt · Portfolio</title>
+<meta name="description" content="Portfolio của Trần Phan Đức Đạt: sinh viên Digital Marketing FPT, dự án kinh doanh, TVC sản phẩm và video AI.">
+<meta property="og:title" content="Trần Phan Đức Đạt · Portfolio">
+<meta property="og:description" content="Digital Marketing · Dự án kinh doanh · TVC và video AI">
+<meta property="og:image" content="about/photo.jpg">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23121214'/%3E%3Ctext x='32' y='44' font-size='34' font-family='Arial' font-weight='900' text-anchor='middle' fill='%23f2b632'%3EĐ%3C/text%3E%3C/svg%3E">
+<style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;800;900&family=Be+Vietnam+Pro:ital,wght@0,400;0,500;0,600;1,400&display=swap">
+<style>
+/* Layout: a screening room — dark film-strip page, each project is a "reel" with timecode labels; the comic reel switches to bright paper. */
+:root{
+  --ink:#121214;        /* screening-room black, slightly cool */
+  --ink-2:#1b1b1f;      /* raised surface */
+  --line:#2c2c33;       /* hairlines */
+  --paper:#f3efe4;      /* comic-page paper */
+  --fg:#ebe8e1;         /* main text on ink */
+  --mute:#9a978f;       /* secondary text */
+  --red:#d6342c;        /* Frame of Proof red */
+  --amber:#f2b632;      /* lighthouse / comic yellow */
+  --paper-fg:#1d1c19;
+  --paper-mute:#5f5b52;
+  --display:"Big Shoulders Display","Arial Narrow","Roboto Condensed",sans-serif;
+  --body:"Be Vietnam Pro","Segoe UI",Roboto,system-ui,sans-serif;
+  --mono:ui-monospace,"SFMono-Regular",Consolas,monospace;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+body{background:var(--ink);color:var(--fg);font-family:var(--body);font-size:16px;line-height:1.6;margin:0}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--ink)}
+.wrap{max-width:1180px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+h1,h2,h3{font-family:var(--display);font-weight:800;line-height:1.12;margin:0;text-wrap:balance;letter-spacing:.005em}
+p{margin:0}
+a{color:inherit}
+img,video{max-width:100%;display:block}
+:focus-visible{outline:2px solid var(--amber);outline-offset:3px}
+
+.tc{font-family:var(--mono);font-size:12px;letter-spacing:.08em;color:var(--mute);font-variant-numeric:tabular-nums;text-transform:uppercase}
+.label{font-size:12px;letter-spacing:.14em;text-transform:uppercase;font-weight:600;color:var(--mute)}
+
+/* top bar */
+.bar{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:color-mix(in srgb,var(--ink) 88%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.bar .wrap{display:flex;gap:20px;align-items:center;justify-content:space-between;padding-block:12px}
+.bar b{font-family:var(--display);font-size:22px;letter-spacing:.04em;font-weight:800}
+.bar b span{color:var(--red)}
+.bar nav{display:flex;gap:18px;flex-wrap:wrap}
+.bar nav a{text-decoration:none;font-size:14px;color:var(--mute)}
+.bar nav a:hover{color:var(--fg)}
+.bar b{white-space:nowrap}
+.bar nav{justify-content:flex-end}
+@media (max-width:980px){.bar nav{display:none}}
+
+/* hero */
+.hero .wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:48px;align-items:center;padding-block:64px 56px}
+.hero h1{font-size:clamp(46px,6.2vw,86px);font-weight:900;text-transform:uppercase;line-height:1.14;padding-top:.08em}
+.channels{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
+.chan{display:inline-flex;align-items:center;gap:10px;text-decoration:none;border:1px solid var(--line);padding:9px 14px;font-weight:600;font-size:14px;color:var(--fg);border-radius:3px;min-width:0;max-width:100%}
+.chan:hover{border-color:var(--amber)}
+.chan i{font-style:normal;font-family:var(--display);font-weight:800;font-size:15px;letter-spacing:.04em;color:var(--ink);background:var(--red);padding:3px 6px;border-radius:2px;line-height:1}
+.chan.tt i{background:var(--amber)}
+.chan.fb i{background:var(--fg)}
+.chan .u{overflow-wrap:anywhere}
+body:not(.editing) .chan .u{display:none}
+body.editing .chan .go{display:none}
+.hero h1 em{font-style:normal;color:var(--amber)}
+.hero .lede{margin-top:22px;max-width:56ch;font-size:18px;color:var(--fg)}
+.hero .role{margin-top:14px;color:var(--mute);max-width:56ch}
+.diptych{position:relative;min-height:440px}
+.diptych figure{margin:0;position:absolute;border:1px solid var(--line);background:var(--ink-2);box-shadow:0 30px 60px -20px rgba(0,0,0,.7)}
+.diptych .a{inset:0 18% auto 0;transform:rotate(-2deg)}
+.diptych .b{width:42%;right:0;bottom:0;transform:rotate(3deg)}
+.diptych figcaption{padding:8px 10px}
+@media (max-width:860px){.hero .wrap{grid-template-columns:1fr;gap:36px;padding-block:40px}.diptych{min-height:0;display:grid;grid-template-columns:1.6fr 1fr;gap:12px;align-items:end}.diptych figure{position:static;transform:none}}
+
+.hero .wrap.statwrap{display:block;padding-block:0}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.stats div{padding:20px 18px;border-right:1px solid var(--line)}
+.stats div:last-child{border-right:0}
+.stats strong{display:block;font-family:var(--display);font-size:46px;font-weight:800;line-height:1;font-variant-numeric:tabular-nums}
+.stats span{font-size:14px;color:var(--mute)}
+@media (max-width:700px){.stats{grid-template-columns:repeat(2,1fr)}.stats div:nth-child(2){border-right:0}.stats div:nth-child(-n+2){border-bottom:1px solid var(--line)}}
+
+/* reels */
+.reel{padding-block:88px 24px}
+.reel-head{display:grid;grid-template-columns:200px 1fr;gap:32px;align-items:start;margin-bottom:36px}
+.reel-head .side{display:flex;flex-direction:column;align-items:flex-start;gap:8px;padding-top:8px;border-top:2px solid var(--red)}
+.reel-head h2{font-size:clamp(44px,6vw,80px);text-transform:uppercase}
+.reel-head .intro{margin-top:16px;max-width:64ch;color:var(--fg)}
+@media (max-width:760px){.reel-head{grid-template-columns:1fr;gap:16px}}
+
+.feature{display:grid;grid-template-columns:1.6fr 1fr;gap:32px;align-items:start}
+.player{background:#000;border:1px solid var(--line);aspect-ratio:16/9;width:100%}
+.player video{width:100%;height:100%;object-fit:contain;background:#000}
+.facts{display:flex;flex-direction:column;gap:20px;min-width:0}
+.facts dl{margin:0;display:grid;grid-template-columns:auto 1fr;gap:10px 16px;font-size:15px}
+.facts dt{color:var(--mute)}
+.facts dd{margin:0}
+.facts ul{margin:0;padding-left:18px;display:flex;flex-direction:column;gap:6px;font-size:15px}
+.chip{display:inline-block;font-size:12px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;padding:3px 8px;border:1px solid var(--line);border-radius:3px;color:var(--mute)}
+.chip.live{border-color:var(--red);color:var(--red)}
+.chip.wip{border-color:var(--amber);color:var(--amber)}
+@media (max-width:860px){.feature{grid-template-columns:1fr}}
+
+.sub{margin-top:56px;display:flex;justify-content:space-between;align-items:baseline;gap:16px;flex-wrap:wrap;border-bottom:1px solid var(--line);padding-bottom:10px;margin-bottom:18px}
+.sub h3{font-size:28px;text-transform:uppercase;letter-spacing:.02em}
+
+.stills{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+.stills.three{grid-template-columns:repeat(3,1fr)}
+.shot{margin:0;position:relative;cursor:zoom-in;background:var(--ink-2);border:0;padding:0;text-align:left;color:inherit;font:inherit}
+.shot img{width:100%;aspect-ratio:16/9;object-fit:cover;transition:filter .25s}
+.shot:hover img{filter:brightness(1.12)}
+.shot.wide{grid-column:span 2}
+.shot .cap{display:block;padding:8px 2px 0;font-size:13px;color:var(--mute)}
+@media (max-width:760px){.stills,.stills.three{grid-template-columns:repeat(2,1fr)}}
+
+/* thumbnail A/B */
+.ab{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.ab .shot{border:1px solid var(--line)}
+.ab .shot .cap{padding:10px 12px 12px}
+.ab .shot .cap b{color:var(--fg);font-weight:600}
+@media (max-width:760px){.ab{grid-template-columns:1fr}}
+
+/* comic reel — paper band */
+.paper{background:var(--paper);color:var(--paper-fg);margin-top:72px}
+.paper .reel{padding-block:80px}
+.paper .tc,.paper .label{color:var(--paper-mute)}
+.paper .reel-head .side{border-top-color:var(--paper-fg)}
+.paper .reel-head h2{color:var(--paper-fg)}
+.paper .reel-head h2 mark{background:var(--amber);color:var(--paper-fg);padding:0 .12em}
+.paper .intro{color:var(--paper-fg)}
+.paper .sub{border-bottom-color:color-mix(in srgb,var(--paper-fg) 25%,transparent)}
+.ep{display:flex;flex-direction:column;gap:8px;min-width:0}
+.ep .frame{position:relative;background:#000;border:2px solid var(--paper-fg);border-radius:6px;overflow:hidden}
+.ep .frame video{width:100%;height:100%;object-fit:cover}
+.ep.v .frame{aspect-ratio:9/16}
+.ep.h .frame{aspect-ratio:16/9}
+.ep h4{margin:0;font-size:15px;line-height:1.35;font-weight:600}
+.ep .meta{display:flex;gap:10px;font-size:12px;color:var(--paper-mute);font-family:var(--mono);font-variant-numeric:tabular-nums}
+.grid-h{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.grid-v{display:grid;grid-template-columns:repeat(5,1fr);gap:18px 14px}
+@media (max-width:980px){.grid-v{grid-template-columns:repeat(3,1fr)}}
+@media (max-width:760px){.grid-h{grid-template-columns:1fr}.grid-v{grid-template-columns:repeat(2,1fr)}}
+
+/* process */
+.steps{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--line)}
+.steps li{padding:22px 20px 26px 0;border-bottom:1px solid var(--line);display:flex;flex-direction:column;gap:8px;min-width:0}
+.steps li:not(:nth-child(4n)){border-right:1px solid var(--line)}
+.steps li:not(:nth-child(4n+1)){padding-left:20px}
+.steps .n{font-family:var(--display);font-size:40px;font-weight:800;color:var(--red);line-height:1}
+.steps h3{font-size:24px;text-transform:uppercase}
+.steps p{font-size:15px;color:var(--mute)}
+@media (max-width:860px){.steps{grid-template-columns:1fr 1fr}.steps li{padding-left:0!important;padding-right:16px}.steps li:not(:nth-child(4n)){border-right:0}.steps li:nth-child(odd){border-right:1px solid var(--line)}.steps li:nth-child(even){padding-left:16px!important}}
+@media (max-width:480px){.steps{grid-template-columns:1fr}.steps li{border-right:0!important;padding-left:0!important}}
+
+.skills{display:grid;grid-template-columns:repeat(3,1fr);gap:32px;margin-top:8px}
+.skills h3{font-size:26px;text-transform:uppercase;margin-bottom:10px}
+.skills ul{margin:0;padding-left:18px;display:flex;flex-direction:column;gap:6px;color:var(--fg);font-size:15px}
+@media (max-width:760px){.skills{grid-template-columns:1fr}}
+
+footer{border-top:1px solid var(--line);margin-top:88px}
+footer .wrap{padding-block:28px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;color:var(--mute);font-size:14px}
+
+/* editable blanks */
+[hidden]{display:none!important}
+[data-field]:empty::before{content:attr(data-ph);color:var(--mute);opacity:.75}
+body.editing [data-field]{outline:1px dashed color-mix(in srgb,var(--amber) 55%,transparent);outline-offset:3px;border-radius:2px;cursor:text;min-width:3ch;display:inline-block}
+body.editing [data-field]:focus{outline:2px solid var(--amber);background:color-mix(in srgb,var(--amber) 8%,transparent)}
+body.editing h3[data-field],body.editing p[data-field],body.editing figcaption[data-field],body.editing dd [data-field],body.editing .metric [data-field]{display:block}
+.who{font-family:var(--display);font-size:24px;font-weight:600;letter-spacing:.04em;text-transform:uppercase;margin-bottom:10px;color:var(--fg)}
+.brief{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border-top:1px solid var(--line)}
+.brief>div{padding:16px 18px 18px 0;border-bottom:1px solid var(--line);display:flex;flex-direction:column;gap:4px;min-width:0}
+.brief>div:not(:nth-child(3n+1)){padding-left:18px;border-left:1px solid var(--line)}
+.brief .k{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--mute);font-weight:600}
+@media (max-width:760px){.brief{grid-template-columns:1fr}.brief>div{padding-left:0!important;border-left:0!important}}
+.slots{display:grid;gap:14px}
+.slots.ads{grid-template-columns:repeat(3,1fr)}
+.slots.gal{grid-template-columns:repeat(4,1fr)}
+@media (max-width:760px){.slots.ads{grid-template-columns:1fr 1fr}.slots.gal{grid-template-columns:1fr 1fr}}
+.slot{margin:0;display:flex;flex-direction:column;gap:8px;min-width:0}
+.slot .box{position:relative;width:100%;max-width:100%;background:var(--ink-2);border:1px solid var(--line);overflow:hidden}
+.slot .box img{width:100%;height:100%;object-fit:cover;cursor:zoom-in}
+.slot figcaption{font-size:14px;color:var(--mute)}
+.slot .add{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;background:transparent;border:1.5px dashed color-mix(in srgb,var(--amber) 60%,transparent);color:var(--amber);font:600 14px var(--body);cursor:pointer;padding:12px;text-align:center}
+.slot .add small{font-weight:400;color:var(--mute);font-size:12px}
+.slot .add:hover{background:color-mix(in srgb,var(--amber) 7%,transparent)}
+.slot .tools{position:absolute;right:8px;bottom:8px;display:flex;gap:6px}
+.slot .tools button,.editbar button{font:600 13px var(--body);padding:7px 12px;border:1px solid var(--line);background:var(--ink);color:var(--fg);cursor:pointer;border-radius:3px}
+.slot .tools button:hover,.editbar button:hover{border-color:var(--amber)}
+.metrics{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.metric{padding:18px 16px;border-right:1px solid var(--line);display:flex;flex-direction:column;gap:4px;min-width:0}
+.metric:last-child{border-right:0}
+.metric .val{font-family:var(--display);font-size:42px;font-weight:800;line-height:1;font-variant-numeric:tabular-nums}
+.metric .lab{font-size:14px;color:var(--mute)}
+@media (max-width:700px){.metrics{grid-template-columns:1fr 1fr}.metric:nth-child(2){border-right:0}.metric:nth-child(-n+2){border-bottom:1px solid var(--line)}}
+.two{display:grid;grid-template-columns:1.3fr 1fr;gap:32px;align-items:start}
+.two>*{min-width:0}
+@media (max-width:860px){.two{grid-template-columns:1fr}}
+.lesson{max-width:70ch;font-size:16px;margin-top:18px}
+.contact{display:flex;gap:24px;flex-wrap:wrap}
+.contact span.k{color:var(--mute);margin-right:6px}
+.editbar{position:fixed;left:0;right:0;bottom:0;z-index:20;background:var(--ink-2);border-top:1px solid var(--amber);padding:10px max(16px,env(safe-area-inset-right,0px)) calc(10px + env(safe-area-inset-bottom,0px)) max(16px,env(safe-area-inset-left,0px));display:flex;gap:12px;align-items:center;justify-content:space-between;flex-wrap:wrap}
+.editbar p{font-size:14px;color:var(--mute);margin:0;flex:1 1 260px}
+.editbar .go{background:var(--amber);color:var(--ink);border-color:var(--amber)}
+.editbar .go:disabled{opacity:.5;cursor:default}
+.editbar .btns{display:flex;gap:8px}
+body.editing footer{padding-bottom:80px}
+
+.projects{display:grid;grid-template-columns:repeat(2,1fr);gap:48px 32px}
+@media (max-width:860px){.projects{grid-template-columns:1fr}}
+.proj{display:flex;flex-direction:column;gap:12px;min-width:0}
+.proj h3{font-size:34px;text-transform:uppercase;margin-top:6px}
+.proj .desc{color:var(--fg);max-width:60ch}
+.thumbs{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.slot.doc .box{aspect-ratio:auto!important;min-height:64px}
+.docrow{display:flex;align-items:center;gap:14px;padding:12px 14px;min-height:64px;padding-right:170px}
+.docrow .ext{font-family:var(--display);font-weight:800;font-size:18px;color:var(--ink);background:var(--red);padding:6px 8px;line-height:1;border-radius:2px}
+.docrow .nm{flex:1;min-width:0;overflow-wrap:anywhere;font-size:14px}
+.docrow a{font-weight:600;font-size:14px;color:var(--amber);white-space:nowrap}
+body:not(.editing) .docrow{padding-right:14px}
+.slot.doc .tools{top:50%;bottom:auto;transform:translateY(-50%)}
+.slot.doc .add{position:static;width:100%;min-height:64px;flex-direction:row}
+.bizlist{display:flex;flex-direction:column;gap:0;border-top:1px solid var(--line)}
+.biz{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:40px;padding-block:40px;border-bottom:1px solid var(--line)}
+.bmeta{display:flex;flex-direction:column;align-items:flex-start;gap:14px;min-width:0}
+.bmeta h3{font-size:clamp(44px,5vw,64px);text-transform:uppercase;font-weight:900}
+.bsub{color:var(--amber);font-weight:600;margin-top:-8px}
+.bmeta dl{margin:0;display:grid;grid-template-columns:auto 1fr;gap:6px 16px;font-size:15px;width:100%}
+.bmeta dt{color:var(--mute)}.bmeta dd{margin:0}
+.bmeta dd a{color:var(--amber)}
+.bmeta>p{max-width:62ch}
+.kpis{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:6px;font-size:15px;color:var(--mute)}
+.kpis b{color:var(--fg);font-family:var(--display);font-size:22px;font-weight:800;margin-right:6px}
+.docbtn{display:inline-flex;align-items:center;gap:12px;text-decoration:none;border:1px solid var(--line);padding:10px 14px 10px 10px;font-weight:600;font-size:14px;color:var(--fg)}
+.docbtn:hover{border-color:var(--amber)}
+.docbtn .ext{font-family:var(--display);font-weight:800;font-size:16px;color:var(--ink);background:var(--red);padding:5px 7px;line-height:1;border-radius:2px}
+.bmeta .slot.doc{width:100%}
+.biz:has(.bgal[hidden]){grid-template-columns:1fr}
+.bgal{display:flex;flex-direction:column;gap:10px;min-width:0}
+.bgal>.shot img{aspect-ratio:auto}
+.biz .bgal .shot img[src*="mt-"]{aspect-ratio:1755/1241}
+.thumbs.four{grid-template-columns:repeat(3,1fr)}
+@media (max-width:860px){.biz{grid-template-columns:1fr;gap:24px}.thumbs.four{grid-template-columns:repeat(3,1fr)}}
+.about{padding-block:72px 8px}
+.about-grid{display:grid;grid-template-columns:minmax(0,320px) minmax(0,1fr);gap:48px;align-items:start}
+.about-photo .box{border:0;background:var(--ink-2)}
+.about-photo .box img{cursor:default}
+.about-body{display:flex;flex-direction:column;gap:14px;min-width:0}
+.about-body h2{font-size:clamp(40px,5vw,64px);text-transform:uppercase}
+.about-sum{max-width:68ch;font-size:17px}
+.facts-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));border-top:1px solid var(--line);margin-top:8px}
+.fact{padding:18px 20px 20px 0;border-bottom:1px solid var(--line);display:flex;flex-direction:column;gap:4px;min-width:0}
+.fact:nth-child(even){padding-left:20px;border-left:1px solid var(--line)}
+.fact.wide{grid-column:1/-1;padding-left:0;border-left:0}
+.fact h3{font-size:20px;text-transform:uppercase;letter-spacing:.04em;color:var(--amber);margin-bottom:4px}
+.fact b{font-weight:600}
+.fact .m{color:var(--mute);font-size:14px;font-variant-numeric:tabular-nums;margin-bottom:6px}
+.tags{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:6px}
+.tags span{font-size:13px;padding:4px 9px;border:1px solid var(--line);border-radius:3px}
+.tags.tools span{color:var(--mute)}
+.contact-line{display:flex;flex-wrap:wrap;gap:8px 28px;font-size:18px}
+@media (max-width:760px){.about-grid{grid-template-columns:1fr;gap:24px}.about-photo{max-width:240px}.facts-grid{grid-template-columns:1fr}.fact:nth-child(even){padding-left:0;border-left:0}}
+/* lightbox */
+dialog{border:0;padding:0;background:transparent;max-width:min(1400px,94vw);max-height:92vh}
+dialog::backdrop{background:rgba(8,8,10,.9)}
+dialog img{max-height:84vh;width:auto;margin:0 auto}
+dialog p{color:var(--fg);text-align:center;padding-top:10px;font-size:14px}
+dialog button{position:fixed;top:calc(14px + env(safe-area-inset-top,0px));right:calc(14px + env(safe-area-inset-right,0px));background:var(--ink-2);color:var(--fg);border:1px solid var(--line);font:600 14px var(--body);padding:8px 14px;cursor:pointer}
+/* intro (hero) */
+.hero .wrap{display:block;padding-block:56px 48px}
+.intro-grid{display:grid;grid-template-columns:minmax(0,340px) minmax(0,1fr);gap:56px;align-items:center}
+.intro-body{display:flex;flex-direction:column;gap:16px;min-width:0}
+.hero h1{font-size:clamp(44px,5.6vw,76px);font-weight:900;text-transform:uppercase;line-height:1.08}
+.hero .lede{font-size:18px;max-width:60ch}
+.about-photo .box{border:1px solid var(--line);background:var(--ink-2)}
+.about-photo .box img{cursor:default}
+.contact-line{display:flex;flex-wrap:wrap;gap:6px 24px;font-size:15px;color:var(--mute)}
+.hero .channels{margin-top:0}
+.hero .wrap.statwrap{padding-block:0 8px}
+@media (max-width:860px){.intro-grid{grid-template-columns:1fr;gap:28px}.about-photo{max-width:260px}}
+/* TVC reel */
+.tvcs{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:40px}
+.tvc{display:grid;grid-template-columns:minmax(0,300px) minmax(0,1fr);gap:24px;align-items:start}
+.tvc .frame{aspect-ratio:9/16;background:#000;border:1px solid var(--line);overflow:hidden}
+.tvc .frame video{width:100%;height:100%;object-fit:cover}
+.tvc .info{display:flex;flex-direction:column;gap:12px;min-width:0}
+.tvc h3{font-size:34px;text-transform:uppercase}
+.tvc .info dl{margin:0;display:grid;grid-template-columns:auto 1fr;gap:6px 14px;font-size:15px}
+.tvc .info dt{color:var(--mute)}.tvc .info dd{margin:0}
+.tvc .info ul{margin:0;padding-left:18px;display:flex;flex-direction:column;gap:6px;font-size:15px}
+.tvc .note{font-size:13px;color:var(--mute)}
+@media (max-width:1060px){.tvcs{grid-template-columns:1fr}}
+@media (max-width:560px){.tvc{grid-template-columns:1fr}.tvc .frame{max-width:320px}}
+.grid-h.two{grid-template-columns:repeat(2,1fr)}
+@media (max-width:760px){.grid-h.two{grid-template-columns:1fr}}
+.grid-v.four{grid-template-columns:repeat(4,1fr)}
+@media (max-width:760px){.grid-v.four{grid-template-columns:repeat(2,1fr)}}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+
+</head>
+<body>
+<header class="bar">
+  <div class="wrap">
+    <b>PHÒNG DỰNG <span>AI</span></b>
+    <nav aria-label="Mục lục">
+      <a href="#gioi-thieu">Giới thiệu</a>
+      <a href="#kinh-doanh">Kinh doanh</a>
+      <a href="#tvc">TVC</a>
+      <a href="#frame-of-proof">True crime</a>
+      <a href="#den-bien">Người gác đèn biển</a>
+      <a href="#lang-com">Làng Cốm</a>
+      <a href="#du-an-khac">Dự án khác</a>
+      <a href="#ky-nang">Kỹ năng</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero" id="gioi-thieu">
+  <div class="wrap">
+    <div class="intro-grid">
+      <figure class="slot about-photo" data-slot="about_photo" data-ratio="4/5" data-src="about/photo.jpg" data-hint="Ảnh chân dung"><div class="box"></div></figure>
+      <div class="intro-body">
+        <p class="label">Portfolio · Digital Marketing · AI video</p>
+        <h1 data-field="name" data-default="Trần Phan Đức Đạt" data-ph="Tên của bạn"></h1>
+        <p class="lede">Sinh viên năm cuối Digital Marketing tại Đại học FPT, định hướng Performance Marketing. Tôi làm trưởng nhóm các dự án kinh doanh và tự làm video bằng AI, từ kịch bản đến thành phẩm.</p>
+        <div class="facts-grid">
+          <div class="fact"><h3>Kinh nghiệm</h3><p>Thực tập truyền thông nội bộ · FPT Software</p><p>Quản lý mạng xã hội · Yummy House (F&amp;B)</p></div>
+          <div class="fact"><h3>Học vấn</h3><p><b>Đại học FPT</b> · Digital Marketing</p><p class="m">2022 – 2026 · Tiếng Anh B2</p></div>
+          <div class="fact wide"><h3>Kỹ năng</h3>
+            <div class="tags"><span>Content Facebook</span><span>Copywriting</span><span>Nghiên cứu thị trường</span><span>Go-to-Market</span><span>Video AI</span></div>
+            <div class="tags tools"><span>Canva</span><span>CapCut</span><span>GA4</span><span>Google Sheets</span><span>Excel</span><span>Gemini</span><span>ChatGPT</span><span>Google Veo</span></div>
+          </div>
+        </div>
+        <div class="contact-line"><span>dat19077@gmail.com</span><span>0367 182 134</span></div>
+        <div class="channels">
+          <a class="chan yt" data-chan="yt_link" target="_blank" rel="noopener"><i>YT</i><span class="go">Kênh YouTube ↗</span><span class="u" data-field="yt_link" data-ph="Dán link kênh YouTube"></span></a>
+          <a class="chan tt" data-chan="tt_link" target="_blank" rel="noopener"><i>TT</i><span class="go">Kênh TikTok ↗</span><span class="u" data-field="tt_link" data-ph="Dán link kênh TikTok"></span></a>
+          <a class="chan fb" data-chan="c_social" target="_blank" rel="noopener"><i>FB</i><span class="go">Facebook ↗</span></a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="wrap statwrap">
+    <div class="stats">
+      <div><strong>3</strong><span>dự án kinh doanh làm trưởng nhóm</span></div>
+      <div><strong>2</strong><span>TVC sản phẩm dựng bằng Veo</span></div>
+      <div><strong>17:17</strong><span>phút phim tài liệu true crime</span></div>
+      <div><strong>13</strong><span>tập hoạt hình Làng Cốm</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- REEL 0: BUSINESS PROJECTS -->
+<section class="reel" id="kinh-doanh">
+  <div class="wrap">
+    <div class="reel-head">
+      <div class="side"><span class="tc">Reel 01</span><span class="chip live">Trưởng nhóm cả 3 dự án</span><span class="tc">Marketing · Kinh doanh</span></div>
+      <div>
+        <h2>Dự án kinh doanh</h2>
+        <p class="intro">Ba dự án nhóm trong chương trình học, tôi đều làm trưởng nhóm. Tôi chia việc, giữ tiến độ và phụ trách phần marketing: nghiên cứu thị trường, định vị, chiến lược ra mắt và trình bày.</p>
+      </div>
+    </div>
+
+    <div class="bizlist">
+      <article class="biz">
+        <div class="bmeta">
+          <span class="chip wip">Đang thực hiện</span>
+          <h3>REC REC</h3>
+          <p class="bsub">Kế hoạch kinh doanh · Snack dế cho Gen Z</p>
+          <dl>
+            <dt>Vai trò</dt><dd>Trưởng nhóm</dd>
+            <dt>Khách hàng</dt><dd>Doanh nghiệp REC REC</dd>
+          </dl>
+          <p data-field="rr_desc" data-default="Xây dựng kế hoạch kinh doanh cho dòng snack làm từ dế, hướng tới khách hàng Gen Z: nghiên cứu thị trường, định vị sản phẩm, kênh bán và kế hoạch truyền thông." data-ph="Mô tả dự án"></p>
+          <figure class="slot doc" data-slot="rr_doc" data-kind="doc" data-hint="File PDF kế hoạch"><div class="box"></div></figure>
+        </div>
+        <div class="bgal" data-group>
+          <figure class="slot" data-slot="rr_c" data-ratio="16/9" data-hint="Ảnh bìa hoặc slide chính"><div class="box"></div><figcaption data-field="rr_c_cap" data-ph="Chú thích"></figcaption></figure>
+          <div class="thumbs">
+            <figure class="slot" data-slot="rr_i1" data-ratio="16/9" data-hint="Slide / ảnh"><div class="box"></div></figure>
+            <figure class="slot" data-slot="rr_i2" data-ratio="16/9" data-hint="Slide / ảnh"><div class="box"></div></figure>
+            <figure class="slot" data-slot="rr_i3" data-ratio="16/9" data-hint="Slide / ảnh"><div class="box"></div></figure>
+          </div>
+        </div>
+      </article>
+
+      <article class="biz">
+        <div class="bmeta">
+          <span class="chip live">Đã hoàn thành</span>
+          <h3>METEV</h3>
+          <p class="bsub">Kế hoạch go-to-market · Xe đạp điện MB1 tại Seoul</p>
+          <dl>
+            <dt>Vai trò</dt><dd>Trưởng nhóm</dd>
+            <dt>Môn học</dt><dd>SSB201 · Nhóm TOTS</dd>
+            <dt>Thị trường</dt><dd>Hàn Quốc</dd>
+          </dl>
+          <p>Chiến lược ra mắt xe đạp điện thông minh MB1 cho giới trẻ Seoul, giá 889 USD, định vị giữa Samchuly và Giant. Kế hoạch gồm sự kiện chạy thử ở Seoul Forest và Hongdae, đồng tài trợ với Waterlyte, chiến dịch đại sứ Hari Won song ngữ Việt–Hàn và chương trình affiliate với cửa hàng xe đạp.</p>
+          <ul class="kpis">
+            <li><b>1.000</b> người chạy thử mục tiêu trong 2 tháng</li>
+            <li><b>70%</b> chi phí sự kiện do đối tác Waterlyte tài trợ</li>
+            <li><b>5%</b> hoa hồng cho đối tác affiliate qua mã QR</li>
+          </ul>
+          <a class="docbtn" href="biz/METEV_GTM_Handout.pdf" target="_blank" rel="noopener"><span class="ext">PDF</span>Xem handout 2 trang ↗</a>
+        </div>
+        <div class="bgal">
+          <button class="shot" data-cap="METEV · Trang 1: tóm tắt, sản phẩm và định giá"><img src="biz/mt-1.jpg" alt="Handout METEV trang 1"><span class="cap">Tóm tắt, sản phẩm, định giá</span></button>
+          <button class="shot" data-cap="METEV · Trang 2: hoạt động marketing tại Seoul"><img src="biz/mt-2.jpg" alt="Handout METEV trang 2"><span class="cap">Hoạt động marketing</span></button>
+        </div>
+      </article>
+
+      <article class="biz">
+        <div class="bmeta">
+          <span class="chip live">Đã hoàn thành</span>
+          <h3>NEXTSTEP</h3>
+          <p class="bsub">Dự án khởi nghiệp · AI Career Mentor</p>
+          <dl>
+            <dt>Vai trò</dt><dd>Trưởng nhóm, Marketing</dd>
+            <dt>Nhóm</dt><dd>6 thành viên: marketing, BA, UX, kỹ sư phần mềm, kỹ sư AI</dd>
+            <dt>Sản phẩm</dt><dd><a href="https://next-steps-theta.vercel.app" target="_blank" rel="noopener">next-steps-theta.vercel.app ↗</a></dd>
+          </dl>
+          <p>Nền tảng AI giúp sinh viên năm cuối và người mới đi làm chỉnh CV theo mô tả công việc và luyện phỏng vấn thử với AI. Pitch deck 36 trang gồm nghiên cứu sơ cấp, TAM–SAM–SOM, đối thủ, SWOT, Business Model Canvas, kế hoạch go-to-market 3 tháng, tính năng sản phẩm và dự phóng tài chính 2026–2028.</p>
+          <ul class="kpis">
+            <li><b>Freemium</b> → 399k → 799k đồng/tháng</li>
+            <li><b>TikTok, Reels, KOC</b> và hoạt động tại trường đại học</li>
+            <li><b>~18 tỷ</b> đồng định giá dự phóng năm 2028</li>
+          </ul>
+          <a class="docbtn" href="biz/NEXTSTEP_Pitchdeck.pdf" target="_blank" rel="noopener"><span class="ext">PDF</span>Xem pitch deck ↗</a>
+        </div>
+        <div class="bgal">
+          <button class="shot" data-cap="NEXTSTEP · Trang bìa AI Career Mentor"><img src="biz/ns01.jpg" alt="Slide bìa AI Career Mentor"><span class="cap">Trang bìa</span></button>
+          <div class="thumbs four">
+            <button class="shot" data-cap="Ý tưởng: vấn đề, khách hàng mục tiêu, giải pháp"><img src="biz/ns04.jpg" alt="Slide ý tưởng"></button>
+            <button class="shot" data-cap="Nghiên cứu sơ cấp: nỗi đau, rào cản, động lực"><img src="biz/ns09.jpg" alt="Slide nghiên cứu sơ cấp"></button>
+            <button class="shot" data-cap="SWOT"><img src="biz/ns12.jpg" alt="Slide SWOT"></button>
+            <button class="shot" data-cap="Business Model Canvas"><img src="biz/ns14.jpg" alt="Slide Business Model Canvas"></button>
+            <button class="shot" data-cap="Kế hoạch hành động: viral content, campus activation, KOC và affiliate"><img src="biz/ns15.jpg" alt="Slide kế hoạch hành động"></button>
+            <button class="shot" data-cap="Gọi vốn và định giá năm 2028"><img src="biz/ns35.jpg" alt="Slide định giá"></button>
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- REEL: TVC -->
+<section class="reel" id="tvc">
+  <div class="wrap">
+    <div class="reel-head">
+      <div class="side"><span class="tc">Reel 02</span><span class="chip live">Spec ad</span><span class="tc">Veo 3 · 9:16 · VI</span></div>
+      <div>
+        <h2>TVC sản phẩm</h2>
+        <p class="intro">Quảng cáo ngắn dạng dọc cho TikTok và Reels, làm bằng Google Veo trong Flow. Tôi viết prompt cho từng cảnh, nối clip, thêm chữ, nhạc và hiệu ứng âm thanh. Đây là quảng cáo ý tưởng (spec ad) để luyện tay nghề, không phải chiến dịch của nhãn hàng.</p>
+      </div>
+    </div>
+    <div class="tvcs">
+      <article class="tvc">
+        <div class="frame"><video controls preload="none" playsinline poster="tvc/nhip.jpg" src="tvc/nhip.mp4"></video></div>
+        <div class="info">
+          <span class="tc">0:15 · 9:16 · có âm thanh</span>
+          <h3>NHỊP Buds Pro</h3>
+          <dl>
+            <dt>Sản phẩm</dt><dd>Tai nghe chống ồn, thương hiệu tự đặt</dd>
+            <dt>Công cụ</dt><dd>Veo 3.1 Quality, 2 clip 8 giây</dd>
+            <dt>Thông điệp</dt><dd>Tắt ồn. Bật chất.</dd>
+          </dl>
+          <ul>
+            <li>Mở bằng sự hỗn loạn của tiếng ồn rồi cắt về im lặng</li>
+            <li>Mỗi cảnh một ý: −45dB, pin 36 giờ, sạc 10 phút nghe 3 giờ</li>
+            <li>Chữ đặt ở vùng tối phía trên để không che sản phẩm</li>
+          </ul>
+        </div>
+      </article>
+      <article class="tvc">
+        <div class="frame"><video controls preload="none" playsinline poster="tvc/pepsi.jpg" src="tvc/pepsi.mp4"></video></div>
+        <div class="info">
+          <span class="tc">0:10 · 9:16 · không lời</span>
+          <h3>Pepsi · Vortex</h3>
+          <dl>
+            <dt>Sản phẩm</dt><dd>Lon nước ngọt có ga</dd>
+            <dt>Công cụ</dt><dd>Google Veo</dd>
+            <dt>Ý tưởng</dt><dd>Sảng khoái bùng nổ</dd>
+          </dl>
+          <ul>
+            <li>Lon xoay giữa lốc xoáy tia điện, đá viên và dòng nước ngọt bắn tung</li>
+            <li>Cận cảnh khui nắp, bọt ga trào lên</li>
+            <li>Kết lại bằng cú bùng sáng để tạo điểm nhấn</li>
+          </ul>
+          <p class="note">Spec ad tự thực hiện, không liên kết với PepsiCo.</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- REEL 1 -->
+<section class="reel" id="frame-of-proof">
+  <div class="wrap">
+    <div class="reel-head">
+      <div class="side"><span class="tc">Reel 03</span><span class="chip live">Đã hoàn thành</span><span class="tc">YouTube · 16:9 · EN</span></div>
+      <div>
+        <h2>Frame of Proof</h2>
+        <p class="intro">Kênh true crime minh hoạ tiếng Anh cho khán giả Mỹ. Tập đầu tiên kể lại vụ án gia đình Halderson ở Wisconsin trong 17 phút, hoàn toàn bằng tranh vẽ AI theo phong cách tiểu thuyết đồ hoạ, có chuyển động máy quay, hiệu ứng, phụ đề và một giọng kể duy nhất.</p>
+      </div>
+    </div>
+
+    <div class="feature">
+      <div class="player"><video controls preload="none" poster="img/i20.jpg" src="v/halderson.mp4"></video></div>
+      <div class="facts">
+        <p class="tc">Trích đoạn 75 giây đầu · bản đầy đủ 17:17</p>
+        <dl>
+          <dt>Tập</dt><dd>“They Never Left”: vụ Halderson</dd>
+          <dt>Định dạng</dt><dd>Phim tài liệu minh hoạ, 1080p</dd>
+          <dt>Hình ảnh</dt><dd>193 tranh minh hoạ, tạo bằng Gemini và ChatGPT</dd>
+          <dt>Nhân vật</dt><dd>5 bảng thiết kế nhân vật giữ khuôn mặt nhất quán</dd>
+        </dl>
+        <ul>
+          <li>Phân tích kịch bản thành từng nhịp kể, mỗi nhịp một khung hình</li>
+          <li>Thiết kế logo kênh, banner và thumbnail</li>
+          <li>Dựng zoom, pan, chuyển cảnh, phụ đề và nhạc nền</li>
+        </ul>
+        <p><span class="chip wip">Tập 2 đang tiền kỳ</span> <span class="tc">Vụ Connie Dabate · kịch bản đã phân tích</span></p>
+      </div>
+    </div>
+
+    <div class="sub"><h3>Khung hình trong phim</h3><span class="tc">Bấm để phóng to</span></div>
+    <div class="stills">
+      <button class="shot" data-cap="Cảnh mở đầu: căn nhà ở ngoại ô, trước khi mọi chuyện bắt đầu"><img src="img/i05.jpg" alt="Ngôi nhà ngoại ô Mỹ dưới nắng chiều"><span class="cap">Căn nhà ngoại ô</span></button>
+      <button class="shot" data-cap="Cảnh sát đến căn cabin trong rừng"><img src="img/i03.jpg" alt="Xe cảnh sát trước cabin gỗ trong rừng"><span class="cap">Cabin trong rừng</span></button>
+      <button class="shot" data-cap="Đội khám nghiệm hiện trường"><img src="img/i07.jpg" alt="Nhân viên khám nghiệm mặc đồ bảo hộ trắng"><span class="cap">Đội khám nghiệm</span></button>
+      <button class="shot" data-cap="Chuyển cảnh chia đôi khung hình: ngày và đêm"><img src="img/i04.jpg" alt="Khung hình chia đôi hồ nước và ngôi nhà ban đêm"><span class="cap">Chuyển cảnh chia đôi</span></button>
+      <button class="shot" data-cap="Con đường đất dẫn vào rừng"><img src="img/i06.jpg" alt="Con đường đất trong rừng thông"><span class="cap">Con đường vào rừng</span></button>
+      <button class="shot" data-cap="Khuôn viên trường học"><img src="img/i08.jpg" alt="Sinh viên đi bộ trong khuôn viên trường"><span class="cap">Khuôn viên trường</span></button>
+      <button class="shot" data-cap="Con phố yên bình nơi câu chuyện mở đầu"><img src="img/i02.jpg" alt="Con phố ngoại ô buổi sáng"><span class="cap">Con phố ngoại ô</span></button>
+      <button class="shot" data-cap="Thám tử phụ trách vụ án"><img src="img/i17.jpg" alt="Thám tử nghe điện thoại tại bàn làm việc"><span class="cap">Thám tử điều tra</span></button>
+    </div>
+
+    <div class="sub"><h3>Thiết kế nhân vật &amp; nhận diện kênh</h3><span class="tc">Character sheets · Branding</span></div>
+    <div class="stills">
+      <button class="shot" data-cap="Bảng nhân vật: thám tử (chính diện và nghiêng)"><img src="img/i01.jpg" alt="Bảng nhân vật thám tử"><span class="cap">Thám tử</span></button>
+      <button class="shot" data-cap="Bảng nhân vật: người cha"><img src="img/i18.jpg" alt="Bảng nhân vật người cha"><span class="cap">Người cha</span></button>
+      <button class="shot" data-cap="Bảng nhân vật: người con gái"><img src="img/i19.jpg" alt="Bảng nhân vật cô gái mặc áo hoodie hồng"><span class="cap">Cô gái</span></button>
+      <button class="shot" data-cap="Banner kênh Frame of Proof"><img src="img/i21.jpg" alt="Banner kênh Frame of Proof"><span class="cap">Banner kênh</span></button>
+    </div>
+  </div>
+</section>
+
+<!-- REEL 2 -->
+<section class="reel" id="den-bien">
+  <div class="wrap">
+    <div class="reel-head">
+      <div class="side" style="border-top-color:var(--amber)"><span class="tc">Reel 04</span><span class="chip">Video thử nghiệm</span><span class="tc">16:9 · VI</span></div>
+      <div>
+        <h2>Người gác đèn biển</h2>
+        <p class="intro">Phim ngắn tiếng Việt kể một câu chuyện tình báo năm 1972: người gác đèn tên Lâm nháy đèn theo mật mã suốt ba năm, cho đến đêm có người giải được tín hiệu. Đây là bản thử để xây dựng quy trình làm video tài liệu 2D, có thêm clip chuyển động AI cho các cảnh then chốt.</p>
+      </div>
+    </div>
+
+    <div class="feature">
+      <div class="player"><video controls preload="none" poster="img/i22.jpg" src="v/denbien.mp4"></video></div>
+      <div class="facts">
+        <p class="tc">Thời lượng 0:26</p>
+        <dl>
+          <dt>Thể loại</dt><dd>Chuyện tình báo có thật, minh hoạ</dd>
+          <dt>Hình ảnh</dt><dd>10 cảnh tĩnh và 2 clip chuyển động AI</dd>
+          <dt>Giọng đọc</dt><dd>Một người kể, tiếng Việt</dd>
+        </dl>
+        <div class="stills three" style="grid-template-columns:repeat(3,1fr)">
+          <button class="shot" data-cap="Bảng nhân vật Lâm, người gác đèn"><img src="img/i10.jpg" alt="Bảng nhân vật Lâm"></button>
+          <button class="shot" data-cap="Ngọn hải đăng trên đảo trong đêm"><img src="img/i12.jpg" alt="Hải đăng trên đảo ban đêm"></button>
+          <button class="shot" data-cap="Cuốn sổ ghi mật mã bên đèn dầu"><img src="img/i13.jpg" alt="Cuốn sổ ghi mật mã"></button>
+        </div>
+      </div>
+    </div>
+
+    <div class="sub"><h3>Thử ba phương án thumbnail</h3><span class="tc">A/B thumbnail</span></div>
+    <div class="ab">
+      <button class="shot" data-cap="Phương án A: chân dung cận, nhãn “Chuyện có thật · 1972”"><img src="img/i14.jpg" alt="Thumbnail phương án A"><span class="cap"><b>A.</b> Chân dung cận mặt, thêm nhãn “Chuyện có thật · 1972” và logo kênh.</span></button>
+      <button class="shot" data-cap="Phương án B: nhân vật sau cửa kính, hải đăng phía sau"><img src="img/i15.jpg" alt="Thumbnail phương án B"><span class="cap"><b>B.</b> Nhân vật sau cửa kính mưa, có hải đăng làm bối cảnh.</span></button>
+      <button class="shot" data-cap="Phương án C: biểu cảm hoảng hốt, tia chớp, chữ lớn hơn"><img src="img/i22.jpg" alt="Thumbnail phương án C"><span class="cap"><b>C.</b> Biểu cảm hoảng hốt, tia chớp, chữ to và đậm hơn.</span></button>
+    </div>
+  </div>
+</section>
+
+<!-- REEL 3 -->
+<div class="paper" id="lang-com">
+  <section class="reel">
+    <div class="wrap">
+      <div class="reel-head">
+        <div class="side"><span class="tc">Reel 05</span><span class="chip" style="border-color:var(--paper-fg);color:var(--paper-fg)">6 / 13 tập</span><span class="tc">Facebook · TikTok · VI</span></div>
+        <div>
+          <h2>Chuyện <mark>Làng Cốm</mark></h2>
+          <p class="intro">Series hoạt hình 2D hài châm biếm, lấy cảm hứng từ Thần Đồng Đất Việt. Cậu bé Cốm dùng sự lanh lợi để lật tẩy quan tham, “chuyên gia” làm giàu và những trò lố của làng. Mỗi tập bắt một chủ đề đang nóng trên mạng như săn sale 11.11, review ảo, check-in hay Halloween. Dưới đây là 6 tập tiêu biểu trong 13 tập.</p>
+        </div>
+      </div>
+
+      <div class="sub"><h3>Bản ngang 16:9</h3><span class="tc">Dài hơn, cho Facebook video</span></div>
+      <div class="grid-h two" id="gridH"></div>
+
+      <div class="sub"><h3>Bản dọc 9:16</h3><span class="tc">Reels · TikTok · Shorts</span></div>
+      <div class="grid-v four" id="gridV"></div>
+    </div>
+  </section>
+</div>
+
+<!-- REEL 4: OTHER PROJECTS (editable blanks) -->
+<section class="reel" id="du-an-khac">
+  <div class="wrap">
+    <div class="reel-head">
+      <div class="side"><span class="tc">Reel 06</span><span class="tc">Ảnh · Tài liệu</span></div>
+      <div>
+        <h2>Dự án khác</h2>
+        <p class="intro" data-field="more_intro" data-ph="Một câu giới thiệu chung cho các dự án dưới đây (không bắt buộc)."></p>
+      </div>
+    </div>
+    <div class="projects">
+      <article class="proj" data-group>
+        <figure class="slot" data-slot="p1c" data-ratio="16/9" data-hint="Ảnh bìa dự án"><div class="box"></div></figure>
+        <h3 data-field="p1_title" data-ph="Tên dự án 1"></h3>
+        <p class="tc" data-field="p1_meta" data-ph="Năm · vai trò · công cụ"></p>
+        <p class="desc" data-field="p1_desc" data-ph="Mô tả ngắn: dự án là gì, bạn làm phần nào, kết quả ra sao."></p>
+        <div class="thumbs">
+          <figure class="slot" data-slot="p1i1" data-ratio="4/3" data-hint="Ảnh thêm"><div class="box"></div></figure>
+          <figure class="slot" data-slot="p1i2" data-ratio="4/3" data-hint="Ảnh thêm"><div class="box"></div></figure>
+          <figure class="slot" data-slot="p1i3" data-ratio="4/3" data-hint="Ảnh thêm"><div class="box"></div></figure>
+        </div>
+        <figure class="slot doc" data-slot="p1d" data-kind="doc" data-hint="File PDF"><div class="box"></div></figure>
+      </article>
+      <article class="proj" data-group>
+        <figure class="slot" data-slot="p2c" data-ratio="16/9" data-hint="Ảnh bìa dự án"><div class="box"></div></figure>
+        <h3 data-field="p2_title" data-ph="Tên dự án 2"></h3>
+        <p class="tc" data-field="p2_meta" data-ph="Năm · vai trò · công cụ"></p>
+        <p class="desc" data-field="p2_desc" data-ph="Mô tả ngắn: dự án là gì, bạn làm phần nào, kết quả ra sao."></p>
+        <div class="thumbs">
+          <figure class="slot" data-slot="p2i1" data-ratio="4/3" data-hint="Ảnh thêm"><div class="box"></div></figure>
+          <figure class="slot" data-slot="p2i2" data-ratio="4/3" data-hint="Ảnh thêm"><div class="box"></div></figure>
+          <figure class="slot" data-slot="p2i3" data-ratio="4/3" data-hint="Ảnh thêm"><div class="box"></div></figure>
+        </div>
+        <figure class="slot doc" data-slot="p2d" data-kind="doc" data-hint="File PDF"><div class="box"></div></figure>
+      </article>
+      <article class="proj" data-group>
+        <figure class="slot" data-slot="p3c" data-ratio="16/9" data-hint="Ảnh bìa dự án"><div class="box"></div></figure>
+        <h3 data-field="p3_title" data-ph="Tên dự án 3"></h3>
+        <p class="tc" data-field="p3_meta" data-ph="Năm · vai trò · công cụ"></p>
+        <p class="desc" data-field="p3_desc" data-ph="Mô tả ngắn: dự án là gì, bạn làm phần nào, kết quả ra sao."></p>
+        <div class="thumbs">
+          <figure class="slot" data-slot="p3i1" data-ratio="4/3" data-hint="Ảnh thêm"><div class="box"></div></figure>
+          <figure class="slot" data-slot="p3i2" data-ratio="4/3" data-hint="Ảnh thêm"><div class="box"></div></figure>
+          <figure class="slot" data-slot="p3i3" data-ratio="4/3" data-hint="Ảnh thêm"><div class="box"></div></figure>
+        </div>
+        <figure class="slot doc" data-slot="p3d" data-kind="doc" data-hint="File PDF"><div class="box"></div></figure>
+      </article>
+      <article class="proj" data-group>
+        <figure class="slot" data-slot="p4c" data-ratio="16/9" data-hint="Ảnh bìa dự án"><div class="box"></div></figure>
+        <h3 data-field="p4_title" data-ph="Tên dự án 4"></h3>
+        <p class="tc" data-field="p4_meta" data-ph="Năm · vai trò · công cụ"></p>
+        <p class="desc" data-field="p4_desc" data-ph="Mô tả ngắn: dự án là gì, bạn làm phần nào, kết quả ra sao."></p>
+        <div class="thumbs">
+          <figure class="slot" data-slot="p4i1" data-ratio="4/3" data-hint="Ảnh thêm"><div class="box"></div></figure>
+          <figure class="slot" data-slot="p4i2" data-ratio="4/3" data-hint="Ảnh thêm"><div class="box"></div></figure>
+          <figure class="slot" data-slot="p4i3" data-ratio="4/3" data-hint="Ảnh thêm"><div class="box"></div></figure>
+        </div>
+        <figure class="slot doc" data-slot="p4d" data-kind="doc" data-hint="File PDF"><div class="box"></div></figure>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section class="reel" id="ky-nang">
+  <div class="wrap">
+    <div class="sub" style="margin-top:0"><h3>Kỹ năng &amp; công cụ</h3></div>
+    <div class="skills">
+      <div><h3>Nội dung</h3><ul><li>Viết kịch bản kể chuyện, hài châm biếm</li><li>Viết hook, tiêu đề và mô tả video</li><li>Nội dung tiếng Việt và tiếng Anh</li></ul></div>
+      <div><h3>Hình ảnh AI</h3><ul><li>Gemini và ChatGPT để tạo ảnh</li><li>Veo để tạo clip chuyển động</li><li>Thiết kế nhân vật, logo, thumbnail</li></ul></div>
+      <div><h3>Marketing</h3><ul><li>Chọn định dạng theo từng nền tảng</li><li>Thử nhiều phương án thumbnail</li><li>Bắt chủ đề theo trend: 11.11, Halloween, review</li></ul></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap" style="flex-direction:column;align-items:flex-start">
+    <div class="contact" data-group>
+      <span data-hide><span class="k">Email</span><span data-field="c_email" data-ph="email@vidu.com"></span></span>
+      <span data-hide><span class="k">Điện thoại</span><span data-field="c_phone" data-ph="09xx xxx xxx"></span></span>
+      <a class="chan yt" data-chan="yt_link" target="_blank" rel="noopener"><i>YT</i><span class="go">YouTube ↗</span></a>
+      <a class="chan tt" data-chan="tt_link" target="_blank" rel="noopener"><i>TT</i><span class="go">TikTok ↗</span></a>
+      <span data-hide><span class="k">Facebook / Zalo</span><span data-field="c_social" data-ph="facebook.com/…"></span></span>
+    </div>
+    <div style="display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;width:100%"><span>Phòng Dựng AI · Portfolio 2026</span><span>Mọi hình ảnh và video trên trang đều do tôi tạo bằng công cụ AI.</span></div>
+  </div>
+</footer>
+
+<div class="editbar" id="editbar" hidden>
+  <p id="editMsg">Chế độ chỉnh sửa: bấm vào ô nét đứt để gõ chữ, bấm “Thêm ảnh” hoặc “Thêm tài liệu” để tải file lên. Chỉ bạn thấy thanh này.</p>
+  <div class="btns"><button type="button" id="viewBtn">Xem như khách</button><button type="button" class="go" id="saveBtn" disabled>Lưu thay đổi</button></div>
+</div>
+<input type="file" id="picker" accept="image/png,image/jpeg,image/webp,image/gif" hidden>
+
+
+<dialog id="lb"><button type="button" id="lbClose">Đóng</button><img id="lbImg" alt=""><p id="lbCap"></p></dialog>
+
+<script>
+const eps=[
+ ["c01","500 Review 5 Sao Sau Một Đêm: Cốm Phát Hiện Cùng Một Nét Chữ","0:45","v"],
+ ["c04","Cả Làng Check-in Giẫm Nát Ruộng Lúa, Cốm Cắm Một Tấm Biển","0:30","v"],
+ ["c05","Cấm Cười Phải Nộp Thuế: Cốm Khiến Quan Trả Tiền Cho Cả Làng Cười Mình","2:56","h"],
+ ["c08","Halloween Ở Làng: Quan Hóa Trang Thành Người Tốt","0:59","v"],
+ ["c11","Siêu Sale 11.11 Của Quan: Tưởng Săn Sale, Ai Dè Bị Sale Săn","0:59","v"],
+ ["c12","Siêu Sale Giảm 50% Ở Chợ Làng: Cốm Nhớ Giá Khiến Lão Bán Vải Cứng Họng","1:27","h"]
+];
+let nh=0,nv=0;
+for(const [id,t,d,o] of eps){
+  const el=document.createElement('article');el.className='ep '+o;
+  el.innerHTML=`<div class="frame"><video controls preload="none" playsinline poster="v/${id}.jpg" src="v/${id}.mp4"></video></div><h4></h4><div class="meta"><span>${d}</span><span>${o==='h'?'16:9':'9:16'}</span></div>`;
+  el.querySelector('h4').textContent=t;
+  document.getElementById(o==='h'?'gridH':'gridV').appendChild(el);
+}
+document.querySelectorAll('video').forEach(v=>v.addEventListener('play',()=>document.querySelectorAll('video').forEach(o=>{if(o!==v)o.pause()})));
+const lb=document.getElementById('lb');
+document.querySelectorAll('.shot').forEach(b=>b.addEventListener('click',()=>{
+  const im=b.querySelector('img');document.getElementById('lbImg').src=im.src;document.getElementById('lbImg').alt=im.alt;
+  document.getElementById('lbCap').textContent=b.dataset.cap||'';lb.showModal();
+}));
+document.getElementById('lbClose').onclick=()=>lb.close();
+lb.addEventListener('click',e=>{if(e.target===lb)lb.close()});
+
+/* ---------- editable blanks ---------- */
+const ED={data:{text:{},img:{}},pending:{},removed:{},local:{},editing:false,canEdit:false,dirty:false,art:null,saving:false};
+const $$=s=>Array.from(document.querySelectorAll(s));
+const slotSrc=k=>ED.pending[k]?.url||ED.local[k]||(ED.data.img[k]||null)||(ED.removed[k]?null:(document.querySelector('[data-slot="'+k+'"]')?.dataset.src||null));
+function fieldVal(el){const k=el.dataset.field;return (k in ED.data.text)?ED.data.text[k]:(el.dataset.default||'')}
+function render(){
+  document.body.classList.toggle('editing',ED.editing);
+  $$('[data-field]').forEach(el=>{
+    if(document.activeElement!==el) el.textContent=fieldVal(el);
+    if(ED.editing){try{el.contentEditable='plaintext-only'}catch(e){el.contentEditable='true'}}else el.removeAttribute('contenteditable');
+    const empty=!el.textContent.trim();
+    const row=el.closest('[data-hide]');
+    if(row) row.hidden=!ED.editing&&empty&&!row.querySelector('[data-slot]');
+    else el.hidden=!ED.editing&&empty;
+    const dd=el.closest('dd'); if(dd){dd.hidden=!ED.editing&&empty; const dt=dd.previousElementSibling; if(dt) dt.hidden=dd.hidden;}
+  });
+  $$('[data-slot]').forEach(fig=>{
+    const k=fig.dataset.slot,src=slotSrc(k),box=fig.querySelector('.box'),isDoc=fig.dataset.kind==='doc';
+    if(!isDoc) box.style.aspectRatio=fig.dataset.ratio||'4/3';
+    box.innerHTML='';
+    if(src&&isDoc){
+      const row=document.createElement('div');row.className='docrow';
+      const nm=ED.pending[k]?.name||ED.data.text[k+'_name']||'Tài liệu';
+      row.innerHTML='<span class="ext">PDF</span><span class="nm"></span><a target="_blank" rel="noopener">Mở tài liệu ↗</a>';
+      row.querySelector('.nm').textContent=nm;row.querySelector('a').href=src;box.appendChild(row);
+      if(ED.editing){const t=document.createElement('div');t.className='tools';
+        const ch=document.createElement('button');ch.type='button';ch.textContent='Đổi file';ch.onclick=()=>pick(k);
+        const rm=document.createElement('button');rm.type='button';rm.textContent='Xoá';rm.onclick=()=>removeImg(k);
+        t.append(ch,rm);box.appendChild(t);}
+    }else if(src){
+      const im=document.createElement('img');im.src=src;im.alt=ED.data.text[k+'_cap']||'Ảnh minh hoạ';
+      im.addEventListener('click',()=>{if(ED.editing)return;document.getElementById('lbImg').src=src;document.getElementById('lbCap').textContent=ED.data.text[k+'_cap']||'';lb.showModal()});
+      box.appendChild(im);
+      if(ED.editing){const t=document.createElement('div');t.className='tools';
+        const ch=document.createElement('button');ch.type='button';ch.textContent='Đổi ảnh';ch.onclick=()=>pick(k);
+        const rm=document.createElement('button');rm.type='button';rm.textContent='Xoá';rm.onclick=()=>removeImg(k);
+        t.append(ch,rm);box.appendChild(t);}
+    }else if(ED.editing){
+      const b=document.createElement('button');b.type='button';b.className='add';
+      b.innerHTML='<span>'+(isDoc?'+ Thêm tài liệu':'+ Thêm ảnh')+'</span><small></small>';b.querySelector('small').textContent=fig.dataset.hint||'PNG, JPG, WEBP';
+      b.onclick=()=>pick(k);box.appendChild(b);
+    }
+    fig.hidden=!ED.editing&&!src;
+  });
+  $$('[data-group]').forEach(g=>{
+    if(ED.editing){g.hidden=false;return}
+    const hasImg=g.querySelectorAll('[data-slot]:not([hidden])').length>0;
+    const hasTxt=Array.from(g.querySelectorAll('[data-field]')).some(f=>f.textContent.trim()&&!f.closest('.sub'));
+    const hasChan=Array.from(g.querySelectorAll('[data-chan]')).some(x=>{const u=(ED.data.text[x.dataset.chan]||'').trim();return !!u});
+    g.hidden=!(hasImg||hasTxt||hasChan);
+  });
+  const mk=document.getElementById('du-an-khac');
+  if(mk&&!ED.editing){mk.hidden=mk.querySelectorAll('[data-group]:not([hidden])').length===0} else if(mk) mk.hidden=false;
+  const navMk=document.querySelector('a[href="#du-an-khac"]'); if(navMk&&mk) navMk.hidden=mk.hidden;
+  $$('[data-chan]').forEach(a=>{let u=(ED.data.text[a.dataset.chan]||'').trim();
+    if(u&&!/^https?:\/\//i.test(u))u='https://'+u;
+    const ok=/^https:\/\/[^\s]+\.[^\s]+/i.test(u.replace(/^http:/i,'https:'));
+    if(ok&&!ED.editing)a.href=u;else a.removeAttribute('href');
+    a.hidden=!ED.editing&&!ok;
+    if(ED.editing&&!a.querySelector('[data-field]'))a.hidden=true;});
+  const bar=document.getElementById('editbar');
+  bar.hidden=!ED.canEdit;
+  document.getElementById('viewBtn').textContent=ED.editing?'Xem như khách':'Chỉnh sửa';
+  document.getElementById('saveBtn').disabled=!ED.dirty||ED.saving;
+  document.getElementById('saveBtn').textContent=ED.saving?'Đang lưu…':'Lưu thay đổi';
+}
+function setDirty(){ED.dirty=true;document.getElementById('saveBtn').disabled=false}
+document.addEventListener('input',e=>{const el=e.target.closest&&e.target.closest('[data-field]');if(!el||!ED.editing)return;ED.data.text[el.dataset.field]=el.textContent.replace(/\s+$/,'');setDirty()});
+document.addEventListener('click',e=>{const a=e.target.closest&&e.target.closest('a.chan');if(a&&ED.editing)e.preventDefault()});
+document.addEventListener('keydown',e=>{const el=e.target.closest&&e.target.closest('[data-field]');if(el&&e.key==='Enter'&&!el.matches('p,figcaption')){e.preventDefault();el.blur()}});
+let pickKey=null;const picker=document.getElementById('picker');
+function pick(k){pickKey=k;const doc=document.querySelector('[data-slot="'+k+'"]').dataset.kind==='doc';picker.accept=doc?'application/pdf,.pdf':'image/png,image/jpeg,image/webp,image/gif';picker.value='';picker.click()}
+picker.addEventListener('change',async()=>{
+  const f=picker.files[0];if(!f||!pickKey)return;
+  const doc=document.querySelector('[data-slot="'+pickKey+'"]').dataset.kind==='doc';
+  if(doc&&!(f.type==='application/pdf'||/\.pdf$/i.test(f.name))){msg('Ô này nhận file PDF. Với file Word, hãy lưu thành PDF trước rồi tải lên.');return}
+  if(doc&&f.size>14*1024*1024){msg('File PDF lớn hơn 14 MB. Hãy nén file hoặc tách nhỏ rồi thử lại.');return}
+  try{const blob=doc?new Blob([f],{type:'application/pdf'}):await shrink(f);const prev=ED.pending[pickKey];if(prev)URL.revokeObjectURL(prev.url);
+    ED.pending[pickKey]={blob,url:URL.createObjectURL(blob),ext:doc?'pdf':'jpg',name:f.name};if(doc)ED.data.text[pickKey+'_name']=f.name;delete ED.removed[pickKey];setDirty();render();}
+  catch(err){msg('Không đọc được ảnh này. Hãy thử ảnh PNG hoặc JPG khác.')}
+});
+function removeImg(k){if(ED.pending[k]){URL.revokeObjectURL(ED.pending[k].url);delete ED.pending[k]}
+  if(ED.data.img[k])ED.removed[k]=ED.data.img[k]; delete ED.local[k]; delete ED.data.text[k+'_name']; setDirty();render()}
+function shrink(file){return new Promise((res,rej)=>{const u=URL.createObjectURL(file);const im=new Image();
+  im.onload=()=>{const m=1800,s=Math.min(1,m/Math.max(im.naturalWidth,im.naturalHeight));const c=document.createElement('canvas');
+    c.width=Math.round(im.naturalWidth*s);c.height=Math.round(im.naturalHeight*s);const x=c.getContext('2d');x.fillStyle='#fff';x.fillRect(0,0,c.width,c.height);x.drawImage(im,0,0,c.width,c.height);
+    URL.revokeObjectURL(u);c.toBlob(b=>b?res(b):rej(new Error('encode')),'image/jpeg',.86)};
+  im.onerror=()=>{URL.revokeObjectURL(u);rej(new Error('load'))};im.src=u})}
+function msg(t){document.getElementById('editMsg').textContent=t}
+async function save(){
+  if(!ED.art||ED.saving)return;ED.saving=true;render();
+  const files={};const next=JSON.parse(JSON.stringify(ED.data));
+  for(const [k,old] of Object.entries(ED.removed)){files[old]=null;delete next.img[k]}
+  const stamp=Date.now().toString(36);
+  for(const [k,p] of Object.entries(ED.pending)){const path=`uploads/${k}-${stamp}.${p.ext||'jpg'}`;files[path]=p.blob;if(next.img[k]&&next.img[k]!==path)files[next.img[k]]=null;next.img[k]=path}
+  files['data/content.json']={content:JSON.stringify(next),contentType:'application/json'};
+  try{await ED.art.publish(files);
+    for(const [k,p] of Object.entries(ED.pending)) ED.local[k]=p.url;
+    ED.pending={};ED.removed={};ED.data=next;ED.dirty=false;msg('Đã lưu. Khách mở trang sẽ thấy nội dung mới.');}
+  catch(e){const c=e&&e.code;
+    if(c==='conflict')msg('Trang vừa được cập nhật ở nơi khác và đang tải lại bản mới.');
+    else if(['not_writer','not_granted','capability_disabled','capability_removed','consent_required','not_declared'].includes(c))msg('Không lưu được ở chế độ xem này. Mở trang bằng tài khoản chủ trang trên claude.ai (không qua link công khai) rồi thử lại.');
+    else if(c==='too_large')msg('Ảnh quá lớn để lưu cùng lúc. Hãy lưu sau mỗi vài ảnh.');
+    else if(c==='rate_limited')msg('Lưu hơi nhanh. Đợi vài giây rồi bấm Lưu lại.');
+    else msg('Chưa lưu được ('+(c||'lỗi')+'). Bấm Lưu thử lại một lần.');}
+  ED.saving=false;render();
+}
+document.getElementById('saveBtn').onclick=save;
+document.getElementById('viewBtn').onclick=()=>{ED.editing=!ED.editing;render()};
+window.addEventListener('beforeunload',e=>{if(ED.dirty){e.preventDefault();e.returnValue=''}});
+(async()=>{
+  try{const r=await fetch('data/content.json',{cache:'no-store'});if(r.ok){const j=await r.json();ED.data={text:j.text||{},img:j.img||{}}}}catch(e){}
+  render();
+  try{
+    const c=window.claude;if(!c||!c.use)return;
+    const [art,user]=await Promise.all([c.use('artifact'),c.use('user')]);
+    const can=user?await user.canEdit().catch(()=>false):false;
+    if(art&&can){ED.art=art;ED.canEdit=true;
+      const empty=!Object.keys(ED.data.text).length&&!Object.keys(ED.data.img).length;
+      ED.editing=empty;render();}
+  }catch(e){}
+})();
+</script>
+
+</body>
+</html>
